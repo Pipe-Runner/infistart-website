@@ -1,0 +1,159 @@
+<div ng-controller="mainContentController" layout-fill>
+    <!-- Nav bar -->
+    <div layout="row" style="position:fixed;top:0px;height:8%;width:100%;z-index: 3;" ng-class="snapIndex!=0?['md-whiteframe-8dp','blackNavBar']:['transparentNavBar']">
+        <div flex="10">
+        </div>
+        <div flex="10" layout="row" layout-align="center center" layout-padding>
+            <!-- Logo -->
+            <img src="./assets/image/logo.png">
+        </div>
+        <div flex="40">
+        </div>
+        <div layout="row" flex layou-margin layout-padding>
+            <!-- Section buttons -->
+            <div layout="column" flex ng-class="'button'" style="color:#ffffff;font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=0" layout-align="center center">
+                Home
+            </div>
+            <div layout="column" flex ng-class="'button'" style="color:#ffffff;font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=1" layout-align="center center">
+                Showcase
+            </div>
+            <div layout="column" flex ng-class="'button'" style="color:#ffffff;font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=2" layout-align="center center">
+                Workflow
+            </div>
+            <div layout="column" flex ng-class="'button'" style="color:#ffffff;font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=3" layout-align="center center">
+                Why us?
+            </div>
+            <div layout="column" flex ng-class="'button'" style="color:#ffffff;font-size:21px;margin:auto;margin-right:3%;" ng-click="snapIndex=5" layout-align="center center">
+                About
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll dots -->
+    <div layout="column" style="position:fixed; right:1%; top:50%; transform:translateY(-50%);" layout-align="center center" layout-margin layout-padding>
+        <div flex ng-class="snapIndex==0?'activeDot':'inactiveDot'" ng-click="snapIndex=0" layout-margin>
+        </div>
+        <div flex ng-class="snapIndex==1?'activeDot':'inactiveDot'" ng-click="snapIndex=1" layout-margin>
+        </div>
+        <div flex ng-class="snapIndex==2?'activeDot':'inactiveDot'" ng-click="snapIndex=2" layout-margin>
+        </div>
+        <div flex ng-class="snapIndex==3?'activeDot':'inactiveDot'" ng-click="snapIndex=3" layout-margin>
+        </div>
+        <div flex ng-class="snapIndex==4?'activeDot':'inactiveDot'" ng-click="snapIndex=4" layout-margin>
+        </div>
+        <div flex ng-class="snapIndex==5?'activeDot':'inactiveDot'" ng-click="snapIndex=5" layout-margin>
+        </div>
+    </div>
+    <!-- Snap scroll -->
+    <div style="height:100%;" snapscroll="" enable-arrow-keys="" snap-index="snapIndex" snap-duration="700" prevent-double-snap-delay="400" snap-easing="linearEasing">
+
+        <!-- Header content -->
+        <div layout="column" style="height:100%;">
+            <div layout="column" flex="80" style="background:url('./assets/image/cover2.jpg')">
+                <div flex="33">
+                </div>
+                <div layout="row" flex="33" layout-align="center center">
+                    <div flex="20">
+                    </div>
+                    <div layout="row" flex style="font-size:50px;color:#ffffff;" layout-align="center center">
+                        Switch To
+                        <div style="position:relative;">
+                            <div style="color:#FFEB3B" ng-class="change==2?['animated','bounceIn']:'invisible'">&nbsp;Smart&nbsp;</div>
+                            <div style="color:#26C6DA;;position:absolute;top: 0;left: 0;" ng-class="change>=1?['animated','hinge']:'visible'">&nbsp;&nbsp;&nbsp;dull&nbsp;&nbsp;&nbsp;</div>
+                        </div> With Us
+                    </div>
+                    <div flex="20">
+                    </div>
+                </div>
+                <div flex="33">
+                </div>
+            </div>
+            <div flex>
+            </div>
+            <div layout="row" flex="15" layout-align="center center">
+                <i style="color:#000000;font-size:45px;" class="material-icons animated infinite flash" ng-click="goDown()">keyboard_arrow_down</i>
+            </div>
+        </div>
+
+        <!-- Product showcase content -->
+        <div layout="column" style="height:100%;background-color:#00BCD4">
+            <div flex="25" layout="row" layout-align="center center">
+                <i class="material-icons moveUp" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
+            </div>
+            <div flex>
+                <!-- Content here -->
+            </div>
+            <div flex="15" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goDown()">keyboard_arrow_down</i>
+            </div>
+        </div>
+        <!-- Workflow content -->
+        <div layout="column" style="height:100%;background-color:#E91E63">
+            <div flex="25" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
+            </div>
+            <div flex>
+                <!-- Content here -->
+            </div>
+            <div flex="15" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goDown()">keyboard_arrow_down</i>
+            </div>
+        </div>
+
+        <!-- Why us? content -->
+        <div layout="column" style="height:100%;background-color:#009688">
+            <div flex="25" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
+            </div>
+            <div flex>
+                <!-- Content here -->
+            </div>
+            <div flex="15" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goDown()">keyboard_arrow_down</i>
+            </div>
+        </div>
+
+        <!-- Our team content -->
+        <div layout="column" style="height:100%;background-color:#F44336">
+            <div flex="25" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
+            </div>
+            <div flex>
+                <!-- Content here -->
+            </div>
+            <div flex="15" layout="row" layout-align="center center">
+                <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goDown()">keyboard_arrow_down</i>
+            </div>
+        </div>
+
+        <!-- Footer content -->
+        <div layout="column" style="height:100%;background-color:#00BCD4">
+            <div flex="25" layout="row" layout-align="center center">
+                <i class="material-icons animated infinite flash" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
+            </div>
+            <div flex layout="row">
+
+            </div>
+            <div flex="10" layout="row" style="background-color:#000000;">
+                <div flex layout="column" style="font-size:16px;color:#ffffff;" layout-padding layout-align="center center">
+                    Copyright © 2016. Infistart Solutions LLP.
+                </div>
+                <div flex="45">
+                </div>
+                <div flex="20" layout="row" layout-align="center center">
+                    <div layout="column" flex layout-margin layout-padding layout-align="center center">
+
+                    </div>
+                    <div layout="column" flex layout-margin layout-padding layout-align="center center">
+
+                    </div>
+                    <div layout="column" flex layout-margin layout-padding layout-align="center center">
+
+                    </div>
+                </div>
+                <div flex="10">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

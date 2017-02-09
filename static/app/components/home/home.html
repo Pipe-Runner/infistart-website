@@ -1,0 +1,40 @@
+<div ng-controller="homeController" layout="column" layout-fill ng-cloak style="overflow-y:hidden;">
+
+<!-- Loading-->
+	<div ng-if="animation" class="fade" flex layout="column" layout-fill layout-align="center center" style="background-color:#FFFFFF">
+		<img src="./assets/gif/Preloader_2.gif">
+	</div>
+
+<!-- Main content-->
+	<div ng-if="pageLoaded" flex layout="column" layout-fill class="fade">
+		<!-- Toolbar -->
+		<!-- <div>
+			<md-toolbar class="md-hue-2">
+		    	<div class="md-toolbar-tools">
+		        	<md-button class="md-icon-button" ng-click="">
+		        		<i class="material-icons" style="color:#FFFFFF;">person</i>
+		        	</md-button>
+		        	<h2>
+		        		<span></span>
+		        	</h2>
+		        	<span flex></span>
+					<md-button class="md-icon-button">
+						<i class="material-icons" style="color:#FFFFFF">receipt</i>
+					</md-button>
+					<md-button class="md-icon-button" ui-sref="home.signup">
+		          		<i class="material-icons" style="color:#FFFFFF">assignment_turned_in</i>
+		        	</md-button>
+		        	<md-button class="md-icon-button" ng-click="fullScreenToggle()">
+		          		<i class="material-icons" style="color:#FFFFFF">crop_free</i>
+		        	</md-button>
+		      	</div>
+		    </md-toolbar>
+		</div> -->
+
+		<div flex layout="row">
+			<!-- UI View -->
+			<div flex="100" ui-view>
+	        </div>
+		</div>
+	</div>
+</div>

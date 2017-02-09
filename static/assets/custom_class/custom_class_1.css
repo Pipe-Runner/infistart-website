@@ -1,0 +1,63 @@
+/*Scroll dots*/
+.inactiveDot {
+	height: 2px;
+	width: 2px;
+	border-radius: 50%;
+	/*background: #ffffff;*/
+	border-size:0.5px;
+	border-style:solid;
+	border-color:#ffffff;
+}
+
+.activeDot {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background: #ffffff;
+}
+
+/*Removing Scrollbar*/
+::-webkit-scrollbar {
+	display: none;
+}
+
+/*Removing dotted border*/
+div {
+   outline: 0;
+}
+
+i {
+   outline: 0;
+}
+
+/*Prevent cursor change*/
+i { cursor: pointer; }
+
+/*Navigation bar*/
+.transparentNavBar {
+	transition: background-color 0.7s ease;
+}
+
+.blackNavBar {
+	background-color: #000000;
+	transition: background-color 0.7s ease;
+}
+
+/* Display */
+.visible {
+
+}
+
+.invisible {
+	opacity: 0;
+}
+
+.moveUp {
+	z-index: 2;
+}
+
+/*Button border*/
+.button {
+	border:0.5px solid #ffffff;
+	cursor: pointer;
+}

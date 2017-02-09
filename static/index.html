@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+	<title>Infistart</title>
+	<link rel="stylesheet" type="text/css" href="./assets/node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="./assets/animations/animate.css">
+	<link rel="stylesheet" type="text/css" href="./assets/animations/animations.css">
+	<link rel="stylesheet" type="text/css" href="./assets/custom_class/custom_class_1.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+</head>
+
+<body ng-controller="mainController" layout="row" layout-fill ng-cloak>
+		<div flex ui-view>
+		</div>
+</body>
+
+<!-- Importing Angular library -->
+<script type="text/javascript" src="./assets/node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="./assets/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+<!-- Importing Angular Material Library -->
+<script type="text/javascript" src="./assets/node_modules/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="./assets/node_modules/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="./assets/node_modules/angular-material/angular-material.js"></script>
+
+<!-- Importing Snapscroll Library -->
+<script type="text/javascript" src="./assets/node_modules/angular-wheelie/dist/angular-wheelie.min.js"></script>
+<script type="text/javascript" src="./assets/node_modules/angular-scrollie/dist/angular-scrollie.min.js"></script>
+<script type="text/javascript" src="./assets/node_modules/angular-snapscroll/dist/angular-snapscroll.min.js"></script>
+
+<!-- Importing main-custom library -->
+<script type="text/javascript" src="./app/app.js"></script>
+<script type="text/javascript" src="./app/modules.js"></script>
+<script type="text/javascript" src="./app/shared/state.js"></script>
+<script type="text/javascript" src="./app/components/main/controller.js"></script>
+
+<!-- Importing sub-custom(home) library -->
+<script type="text/javascript" src="./app/components/home/controller.js"></script>
+
+<!-- Importing sub-custom(mainContent) library -->
+<script type="text/javascript" src="./app/components/mainContent/controller.js"></script>
+
+</html>
