@@ -50,14 +50,96 @@ i { cursor: pointer; }
 
 .invisible {
 	opacity: 0;
-}
-
-.moveUp {
-	z-index: 2;
+	visibility: hidden;
 }
 
 /*Button border*/
 .button {
 	border:0.5px solid #ffffff;
 	cursor: pointer;
+	color: #ffffff;
+}
+
+/*.activeButton {
+	border:0.5px solid #ffffff;
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #000000;
+	transition: all 0.7s ease;
+}*/
+
+.activeButton {
+	animation-name: bubble;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-direction: alternate-reverse;
+	animation-timing-function: ease-in;
+	color: #000000;
+	transition: color 0.5s ease;
+}
+
+@keyframes bubble {
+	0%{
+		background: #ffffff;
+		border:0.5px solid #ffffff;
+	}
+	20% {
+		background: #F4FF81;
+		border:0.5px solid #F4FF81;
+	}
+	40% {
+		background: #B388FF;
+		border:0.5px solid #B388FF;
+	}
+	60% {
+		background: #EA80FC;
+		border:0.5px solid #EA80FC;
+	}
+	80% {
+		background: #84FFFF;
+		border:0.5px solid #84FFFF;
+	}
+	 100%{
+		background: #ffffff;
+		border:0.5px solid #ffffff;
+	}
+}
+
+/* Product details */
+.mainProductDetailBox {
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;
+	opacity: 1;
+	visibility: visible;
+	/*Unable to animate fade out*/
+}
+
+.productDetails {
+	z-index: 4;
+	background: #ffffff;
+}
+
+.blur{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	/*filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);*/
+}
+
+.hide {
+	opacity: 0;
+	z-index: -1;
+	visibility: hidden;
 }
