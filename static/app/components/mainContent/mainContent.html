@@ -1,4 +1,5 @@
 <div ng-controller="mainContentController" layout-fill style="position:relative;">
+
     <!-- Nav bar -->
     <div layout="row" style="position:fixed;top:0px;height:8%;width:100%;z-index: 2;" ng-class="snapIndex!=0?['md-whiteframe-8dp','blackNavBar']:['transparentNavBar']">
         <div flex="10" layout="row" layout-align="center center" layout-margin layout-padding>
@@ -6,32 +7,33 @@
             <img src="./assets/image/infistartlogo.png">
         </div>
         <div flex="45">
+            <!-- Gap -->
         </div>
-        <div layout="row" flex layou-margin layout-padding>
+        <div layout="row" flex layou-margin layout-padding style="font-family: 'Acme', sans-serif;font-size:17px;">
             <!-- Section buttons -->
-            <div layout="column" flex ng-class="snapIndex==0?'activeButton':'button'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=0" layout-align="center center">
+            <div layout="column" flex ng-class="snapIndex==0?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=0" layout-align="center center">
                 Home
             </div>
-            <div layout="column" flex ng-class="snapIndex==1?'activeButton':'button'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=1" layout-align="center center">
+            <div layout="column" flex ng-class="snapIndex==1?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=1" layout-align="center center">
                 Showcase
             </div>
-            <div layout="column" flex ng-class="snapIndex==2?'activeButton':'button'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=2" layout-align="center center">
+            <div layout="column" flex ng-class="snapIndex==2?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=2" layout-align="center center">
                 Workflow
             </div>
-            <div layout="column" flex ng-class="snapIndex==3?'activeButton':'button'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=3" layout-align="center center">
+            <div layout="column" flex ng-class="snapIndex==3?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=3" layout-align="center center">
                 Why us?
             </div>
-            <div layout="column" flex ng-class="snapIndex==4?'activeButton':'button'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=4" layout-align="center center">
+            <div layout="column" flex ng-class="snapIndex==4?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=4" layout-align="center center">
                 Our team
             </div>
-            <div layout="column" flex ng-class="snapIndex==5?'activeButton':'button'" style="font-size:21px;margin:auto;margin-right:3%;" ng-click="snapIndex=5" layout-align="center center">
+            <div layout="column" flex ng-class="snapIndex==5?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:3%;" ng-click="snapIndex=5" layout-align="center center">
                 About
             </div>
         </div>
     </div>
 
     <!-- Scroll dots -->
-    <div layout="column" style="position:fixed; right:1%; top:50%; transform:translateY(-50%);" layout-align="center center" layout-margin layout-padding>
+    <div layout="column" style="position:fixed; right:1%; top:50%; transform:translateY(-50%);z-index:2;" layout-align="center center" layout-margin layout-padding>
         <div flex ng-class="snapIndex==0?'activeDot':'inactiveDot'" ng-click="snapIndex=0" layout-margin>
         </div>
         <div flex ng-class="snapIndex==1?'activeDot':'inactiveDot'" ng-click="snapIndex=1" layout-margin>
@@ -47,7 +49,7 @@
     </div>
 
     <!-- Product detail panel -->
-    <div layout="row" ng-class="showDetails?['mainProductDetailBox','animated','fadeIn']:['hide']">
+    <div layout="row" ng-class="showDetails?['productDetailsPanelVisible']:['productDetailsPanelInvisible']">
         <!-- background-color blur -->
         <div class="blur" ng-click="showDetails=false">
 
@@ -62,21 +64,39 @@
                 <img style="width:100%;height:100%;" src="./assets/image/product_2.png">
             </div>
             <!-- Product details and buttons -->
-            <div layout="column" flex>
-                <div layout="row" flex="15">
-                    <div flex layout="row" layout-align="end center" layout-padding>
-                        <i class="material-icons" style="font-size:40px;">library_books</i>
+            <div layout="column" flex layout-margin layout-padding>
+                <div layout="row" flex style="font-size:18px;font-family: 'Dosis', sans-serif;">
+                    <!-- Product abstract icon & text -->
+                    <div flex layout="column" layout-padding>
+                        <div layout="column" flex="30" layout-align="center center">
+                            <img src="./assets/icons/about.png" style="max-height:100%;height:auto;">
+                        </div>
+                        <div layout="column" flex layout-align="start center" layout-margin layout-padding>
+                            {{selected.abstract}}
+                        </div>
                     </div>
-                    <div flex layout="row" layout-align="center center" layout-padding>
-                        <i class="material-icons" style="font-size:40px;">dvr</i>
+                    <!-- Product pros icon & text -->
+                    <div flex layout="column" layout-padding>
+                        <div layout="column" flex="30" layout-align="center center">
+                            <img src="./assets/icons/points.png" style="max-height:100%;height:auto;">
+                        </div>
+                        <div layout="column" class="listStyle" flex layout-align="start center" layout-margin layout-padding>
+                            <ul ng-repeat="item in selected.pros">
+                                <li>{{item}}</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div flex layout="row" layout-align="start center" layout-padding>
-                        <i class="material-icons" style="font-size:40px;">attach_money</i>
+                    <!-- Product price icon & text -->
+                    <div flex layout="column" layout-padding>
+                        <div layout="column" flex="30" layout-align="center center">
+                            <img src="./assets/icons/price.png" style="max-height:100%;height:auto;">
+                        </div>
+                        <div layout="column" flex layout-align="start center" layout-margin layout-padding>
+                            {{selected.price}}
+                        </div>
                     </div>
                 </div>
-                <div layout="row" flex layout-margin layout-padding>
-                    {{"data"}}
-                </div>
+                <!-- Buy and Back buttons -->
                 <div flex="10" layout="row" layout-align="end center" layout-padding layout-margin>
                     <md-button class="md-raised md-warn" style="font-size:19px;" ng-click="showDetails=false">Back</md-button>
                     <md-button class="md-raised md-primary" style="font-size:19px;">Buy</md-button>
@@ -97,11 +117,11 @@
                 <div layout="row" flex layout-align="center center">
                     <div flex="20">
                     </div>
-                    <div layout="row" flex style="font-size:50px;color:#ffffff;" layout-align="center center">
+                    <div layout="row" flex style="font-size:60px;font-weight:500;font-family: 'Ubuntu', sans-serif;color:#ffffff;" layout-align="center center">
                         Switch To
                         <div style="position:relative;">
-                            <div style="color:#FFEB3B" ng-class="change==2?['animated','bounceIn']:'invisible'">&nbsp;Smart&nbsp;</div>
-                            <div style="color:#26C6DA;position:absolute;top: 0;left: 0;" ng-class="change>=1?['animated','hinge']:'visible'">&nbsp;&nbsp;&nbsp;dull&nbsp;&nbsp;&nbsp;</div>
+                            <div style="color:#FFEB3B" ng-class="change==2?['animated','bounceIn']:'smartInvisible'">&nbsp;Smart&nbsp;</div>
+                            <div style="color:#26C6DA;position:absolute;top: 0;left: 0;" ng-class="change>=1?['animated','hinge','dullInvisible']:'dullVisible'">&nbsp;&nbsp;&nbsp;dull&nbsp;&nbsp;&nbsp;</div>
                         </div> With Us
                     </div>
                     <div flex="20">
@@ -115,14 +135,62 @@
 
 
         <!-- Product showcase content -->
-        <div layout="column" style="height:100%;background-color:#9C27B0">
+        <div layout="column" style="height:100%;background-color:#673AB7">
             <div flex="15" layout="row" layout-align="center end">
                 <i class="material-icons" style="font-size:45px;color:#ffffff;z-index:1;" ng-click="goUp()">keyboard_arrow_up</i>
             </div>
             <div layout="row" flex>
+                <div flex="10">
+
+                </div>
                 <!-- Product list -->
-                <div>
-                    <md-button class="md-raised md-primary" style="font-size:19px;" ng-click="renderDetails(0)">Test</md-button>
+                <div flex layout="column" layout-padding>
+                    <div flex layout="row" layout-padding>
+                        <!-- Product 1 -->
+                        <md-whiteframe flex class="hvr-float-shadow" style="background:#64FFDA;border-radius:15px 15px 15px 15px;" ng-click="renderDetails(0)">
+                            <img src="./assets/image/product_icon_1.png" style="width:100%;height:100%;">
+                        </md-whiteframe>
+                        <!-- Product 2 -->
+                        <div flex>
+
+                        </div>
+                        <!-- Product 3 -->
+                        <div flex>
+
+                        </div>
+                        <!-- Product 4 -->
+                        <div flex>
+
+                        </div>
+                        <!-- Product 5 -->
+                        <div flex>
+
+                        </div>
+                        <!-- Product 6 -->
+                        <div flex>
+
+                        </div>
+                        <!-- Product 7 -->
+                        <div flex>
+
+                        </div>
+                        <!-- Product 8 -->
+                        <div flex>
+
+                        </div>
+                    </div>
+                    <div flex layout="row" layout-padding>
+
+                    </div>
+                    <div flex layout="row" layout-padding>
+
+                    </div>
+                    <div flex layout="row" layout-padding>
+
+                    </div>
+                </div>
+                <div flex="10">
+
                 </div>
             </div>
             <div flex="10" layout="row" layout-align="center center">

@@ -1,3 +1,8 @@
+/*Removing Scrollbar*/
+::-webkit-scrollbar {
+	display: none;
+}
+
 /*Scroll dots*/
 .inactiveDot {
 	height: 2px;
@@ -16,22 +21,15 @@
 	background: #ffffff;
 }
 
-/*Removing Scrollbar*/
-::-webkit-scrollbar {
-	display: none;
-}
-
-/*Removing dotted border*/
+/*Removing dotted border and cursor change on links and divs*/
 div {
    outline: 0;
 }
 
 i {
    outline: 0;
+   cursor: pointer;
 }
-
-/*Prevent cursor change*/
-i { cursor: pointer; }
 
 /*Navigation bar*/
 .transparentNavBar {
@@ -43,30 +41,27 @@ i { cursor: pointer; }
 	transition: background-color 0.7s ease;
 }
 
-/* Display */
-.visible {
-
+/* Header Word Animations */
+.dullVisible {
+	z-index: 1;
 }
 
-.invisible {
+.dullInvisible {
+	z-index: -1;
+	transition-delay: 2.5s;
+}
+
+.smartInvisible {
 	opacity: 0;
 	visibility: hidden;
 }
 
-/*Button border*/
-.button {
+/*Navigation Button border*/
+.inactiveButton {
 	border:0.5px solid #ffffff;
 	cursor: pointer;
 	color: #ffffff;
 }
-
-/*.activeButton {
-	border:0.5px solid #ffffff;
-	cursor: pointer;
-	background-color: #ffffff;
-	color: #000000;
-	transition: all 0.7s ease;
-}*/
 
 .activeButton {
 	animation-name: bubble;
@@ -106,8 +101,8 @@ i { cursor: pointer; }
 	}
 }
 
-/* Product details */
-.mainProductDetailBox {
+/* Product details Page*/
+.productDetailsPanelVisible {
 	height:100%;
 	width:100%;
 	position:absolute;
@@ -115,8 +110,18 @@ i { cursor: pointer; }
 	left:0;
 	z-index:3;
 	opacity: 1;
-	visibility: visible;
-	/*Unable to animate fade out*/
+	transition:opacity 0.3s ease-out;
+}
+
+.productDetailsPanelInvisible {
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.2s ease-in;
 }
 
 .productDetails {
@@ -130,16 +135,10 @@ i { cursor: pointer; }
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	/*filter: blur(10px);
-	-webkit-filter: blur(10px);
-	-moz-filter: blur(10px);
-	-o-filter: blur(10px);
-	-ms-filter: blur(10px);*/
+	background:rgba(0,0,0,0.8);
 }
 
-.hide {
-	opacity: 0;
-	z-index: -1;
-	visibility: hidden;
-}
+/* List */
+.listStyle { }
+.listStyle ul { list-style:none; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:10px 0; }
+.listStyle ul li { display:inline;padding:0 5px; margin: 0px;}
