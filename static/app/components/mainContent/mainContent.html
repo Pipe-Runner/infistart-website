@@ -69,7 +69,7 @@
                     <!-- Product abstract icon & text -->
                     <div flex layout="column" layout-padding>
                         <div layout="column" flex="30" layout-align="center center">
-                            <img src="./assets/icons/about.png" style="max-height:100%;height:auto;">
+                            <img src="./assets/icons/about.png" class="imageResize">
                         </div>
                         <div layout="column" flex layout-align="start center" layout-margin layout-padding>
                             {{selected.abstract}}
@@ -78,7 +78,7 @@
                     <!-- Product pros icon & text -->
                     <div flex layout="column" layout-padding>
                         <div layout="column" flex="30" layout-align="center center">
-                            <img src="./assets/icons/points.png" style="max-height:100%;height:auto;">
+                            <img src="./assets/icons/points.png" class="imageResize">
                         </div>
                         <div layout="column" class="listStyle" flex layout-align="start center" layout-margin layout-padding>
                             <ul ng-repeat="item in selected.pros">
@@ -89,7 +89,7 @@
                     <!-- Product price icon & text -->
                     <div flex layout="column" layout-padding>
                         <div layout="column" flex="30" layout-align="center center">
-                            <img src="./assets/icons/price.png" style="max-height:100%;height:auto;">
+                            <img src="./assets/icons/price.png" class="imageResize">
                         </div>
                         <div layout="column" flex layout-align="start center" layout-margin layout-padding>
                             {{selected.price}}
@@ -283,17 +283,111 @@
             <div flex="15" layout="row" layout-align="center end">
                 <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
             </div>
-            <div flex>
+            <div flex layout="column">
                 <!-- Content here -->
-                <div flex="10" layout="column" layout-align="end center" style="font-family: 'Ubuntu', sans-serif;font-size:35px;color:#ffffff;">
+                <div flex="15" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:35px;color:#ffffff;">
                     Why Us ?
+                    <br />
                 </div>
-                <div flex layout="row" layout-align="center center">
+                <div flex layout="row">
                     <div flex="5">
                         <!-- Gap -->
                     </div>
-                    <div>
-                        <!-- Main stuff -->
+
+                    <!-- Text left -->
+                    <div flex="25" layout="column">
+                        <div flex layout="row">
+                            <div flex="70" layout="column" layout-align="center">
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:24px;color:#ffffff;text-align:right;">
+                                    Experience
+                                </div>
+                                <br />
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:16px;color:#ffffff;text-align:right;">
+                                    Our crew consists of bright innovative Software Developers from IITs and NITs who have spent enormous time working on products like these.
+                                </div>
+                            </div>
+                            <div flex layout="column" layout-align="center center">
+                                <img class="imageResize"  src="./assets/icons/experience.png" />
+                            </div>
+                        </div>
+                        <div flex layout="row">
+                            <div flex="70" layout="column" layout-align="center">
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:24px;color:#ffffff;text-align:right;">
+                                    Server Integration
+                                </div>
+                                <br />
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:16px;color:#ffffff;text-align:right;">
+                                    We connect our product with our own servers for centralised control and data security.
+                                </div>
+                            </div>
+                            <div flex layout="column" layout-align="center center">
+                                <img class="imageResize"  src="./assets/icons/server_integration.png" />
+                            </div>
+                        </div>
+                        <div flex layout="row">
+                            <div flex="70" layout="column" layout-align="center">
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:24px;color:#ffffff;text-align:right;">
+                                    User Analytics
+                                </div>
+                                <br />
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:16px;color:#ffffff;text-align:right;">
+                                    We provide analytics using Google Analytics that helps you understand your users.
+                                </div>
+                            </div>
+                            <div flex layout="column" layout-align="center center">
+                                <img class="imageResize"  src="./assets/icons/analysis.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div flex layout="column" layout-align="center">
+                        <img class="imageResize" src="./assets/image/monitor.png"/>
+                    </div>
+
+                    <!-- Text right -->
+                    <div flex="25" layout="column">
+                        <div flex layout="row">
+                            <div flex layout="column" layout-align="center center">
+                                <img class="imageResize"  src="./assets/icons/looks.png" />
+                            </div>
+                            <div flex="70" layout="column" layout-align="center">
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:24px;color:#ffffff;text-align:left;">
+                                    Design
+                                </div>
+                                <br />
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:16px;color:#ffffff;text-align:left;">
+                                    All our products strictly follow Material Design Guidelines to give our users an unmatched user experience.
+                                </div>
+                            </div>
+                        </div>
+                        <div flex layout="row">
+                            <div flex layout="column" layout-align="center center">
+                                <img class="imageResize"  src="./assets/icons/api.png" />
+                            </div>
+                            <div flex="70" layout="column" layout-align="center">
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:24px;color:#ffffff;text-align:left;">
+                                    Google APIs
+                                </div>
+                                <br />
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:16px;color:#ffffff;text-align:left;">
+                                    Cloud Messaging, Maps, Geo and Location, Wallet, Google+ , Admobs and Analytics.
+                                </div>
+                            </div>
+                        </div>
+                        <div flex layout="row">
+                            <div flex layout="column" layout-align="center center">
+                                <img class="imageResize"  src="./assets/icons/support.png" />
+                            </div>
+                            <div flex="70" layout="column" layout-align="center">
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:24px;color:#ffffff;text-align:left;">
+                                    Full Support
+                                </div>
+                                <br />
+                                <div style="font-family: 'Ubuntu', sans-serif;font-size:16px;color:#ffffff;text-align:left;">
+                                    We provide full service support for bug fixes and addition features to give you a complete user satisfaction.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div flex="5">
                         <!-- Gap -->
