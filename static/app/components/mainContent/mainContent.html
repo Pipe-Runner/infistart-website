@@ -6,10 +6,10 @@
             <!-- Logo -->
             <img src="./assets/image/infistartlogo.png">
         </div>
-        <div flex="45">
+        <div flex>
             <!-- Gap -->
         </div>
-        <div layout="row" flex layou-margin layout-padding style="font-family: 'Acme', sans-serif;font-size:17px;">
+        <div layout="row" flex="45" layou-margin layout-padding style="font-family: 'Acme', sans-serif;font-size:17px;">
             <!-- Section buttons -->
             <div layout="column" flex ng-class="snapIndex==0?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=0" layout-align="center center">
                 Home
@@ -27,7 +27,7 @@
                 Our team
             </div>
             <div layout="column" flex ng-class="snapIndex==5?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:3%;" ng-click="snapIndex=5" layout-align="center center">
-                About
+                About Us
             </div>
         </div>
     </div>
@@ -417,7 +417,156 @@
             <div flex="15" layout="row" layout-align="center end">
                 <i class="material-icons animated infinite flash" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
             </div>
+
+            <!-- Testimonail content -->
+            <div flex="30" layout="column">
+                <div flex="20" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:30px;color:#ffffff;">
+                    Happy Customers
+                </div>
+                <div flex layout="row">
+                    <div flex="30">
+                        <!-- Gap -->
+                    </div>
+
+                    <!-- Slide one -->
+                    <div flex layout="row" ng-class="textSlide==0?['animated','bounceIn']:['animated','flipOutY','textSlideInvisible']" layout-align="center start" layout-padding layout-margin>
+                        <div flex="10" layout="column" layout-align="center end">
+                            <img class="imageResize" src="./assets/icons/quoteLeft.png">
+                        </div>
+                        <div flex layout="column">
+                            <div flex style="font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                                The team is awesome. With young members they work like professionals.
+                                From designing of the product UX to implementing UI and functionality, they do it perfectly.
+                                They do have a great future ahead. Keep it up!
+                            </div>
+                            <div flex style="text-align:right;font-family: 'Ubuntu', sans-serif;font-size:14px;color:#ffffff;">
+                                <br />
+                                -Nadeem Ansari (Co-founder, Sensus Labs)
+                            </div>
+                        </div>
+                        <div flex="10" layout="column" layout-align="center start">
+                            <img class="imageResize" src="./assets/icons/quoteRight.png">
+                        </div>
+                    </div>
+
+                    <!-- Slide two -->
+                    <div flex layout="row" ng-class="textSlide==1?['animated','bounceIn']:['animated','flipOutY','textSlideInvisible']" layout-align="center start" layout-padding layout-margin>
+                        <div flex="10" layout="column" layout-align="center end">
+                            <img class="imageResize" src="./assets/icons/quoteLeft.png">
+                        </div>
+                        <div flex layout="column">
+                            <div flex style="font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                                This is a test data, dont sweat if you dont understand this but life is playing tricks with you.
+                                You need to break out of the matrix.
+                            </div>
+                            <div flex style="text-align:right;font-family: 'Ubuntu', sans-serif;font-size:14px;color:#ffffff;">
+                                <br />
+                                -Yash Chandra (Co-founder, Infistart)
+                            </div>
+                        </div>
+                        <div flex="10" layout="column" layout-align="center start">
+                            <img class="imageResize" src="./assets/icons/quoteRight.png">
+                        </div>
+                    </div>
+
+                    <!-- Slide three -->
+                    <div flex layout="row" ng-class="textSlide==2?['animated','bounceIn']:['animated','flipOutY','textSlideInvisible']" layout-align="center start" layout-padding layout-margin>
+                        <div flex="10" layout="column" layout-align="center end">
+                            <img class="imageResize" src="./assets/icons/quoteLeft.png">
+                        </div>
+                        <div flex layout="column">
+                            <div flex style="font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                                The test UI is awesome, coz I made it... LOL
+                            </div>
+                            <div flex style="text-align:right;font-family: 'Ubuntu', sans-serif;font-size:14px;color:#ffffff;">
+                                <br />
+                                -Aakash Mallik (Generation 1 employee, Infistart)
+                            </div>
+                        </div>
+                        <div flex="10" layout="column" layout-align="center start">
+                            <img class="imageResize" src="./assets/icons/quoteRight.png">
+                        </div>
+                    </div>
+                    <div flex="30">
+                        <!-- Gap -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- About us and contact us content -->
             <div flex layout="row">
+                <div flex="5">
+                    <!-- Gap -->
+                </div>
+                <div flex layout="column">
+                    <div flex="10" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-weight:600;font-size:22px;color:#ffffff;">
+                        About Us
+                    </div>
+                    <div flex layout="column" layout-margin layout-align style="text-align:left;font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                        We are a team of young software developers who love to innovate.
+                        We have worked on the newest of software platforms and have delivered only the best of products.
+                        Let our skills help you through your journey.
+                        If you have got a startup, we have got a special technical team for you.
+                        Join us to have a great startup journey to success.
+                    </div>
+                    <!-- Phone number -->
+                    <div flex="15" layout="row" layout-padding>
+                        <img flex="10" class="imageResize" src="./assets/icons/phone.png" />
+                        <div flex layout="column" layout-align="center start" style="text-align:left;font-family: 'Ubuntu', sans-serif;font-size:14px;color:#ffffff;">
+                            &nbsp (+91) 876 500 3288 &nbsp , &nbsp (+91) 805 241 0526
+                        </div>
+                    </div>
+                    <!-- Email Id -->
+                    <div flex="15" layout="row" layout-padding>
+                        <img flex="10" class="imageResize" src="./assets/icons/email.png" />
+                        <div flex layout="column" layout-align="center start" style="text-align:left;font-family: 'Ubuntu', sans-serif;font-size:14px;color:#ffffff;">
+                            &nbsp info@infistart.com &nbsp , &nbsp info@appbox.com
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div flex="15" layout="row" layout-padding>
+                        <img flex="10" class="imageResize" src="./assets/icons/address.png" />
+                        <div flex layout="column" layout-align="center start" style="text-align:left;font-family: 'Ubuntu', sans-serif;font-size:14px;color:#ffffff;">
+                            &nbsp IIT BHU, &nbsp Varanasi, &nbsp India 221002
+                        </div>
+                    </div>
+                    <div flex="5">
+                        <!-- Gap -->
+                    </div>
+                </div>
+                <div flex="10">
+
+                </div>
+                <div flex="50" layout="column">
+                    <div flex="10" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-weight:600;font-size:20px;color:#ffffff;">
+                        Contact Us
+                    </div>
+                    <div flex="20" layout="row">
+                        <md-input-container layout-margin flex="50">
+                            <label>First name</label>
+                            <input ng-model="firstName">
+                         </md-input-container>
+                         <md-input-container layout-margin flex="50">
+                            <label>Last name</label>
+                            <input ng-model="lastName">
+                          </md-input-container>
+                    </div>
+                    <div flex="20" layout="row">
+                        <md-input-container layout-margin flex="100">
+                           <label>Email ID</label>
+                           <input ng-model="emailId">
+                        </md-input-container>
+                    </div>
+                    <div flex layout="row">
+                        <md-input-container layout-margin flex="100">
+                            <label>Message</label>
+                            <textarea ng-model="message" md-maxlength="300" rows="4" md-select-on-focus></textarea>
+                        </md-input-container>
+                    </div>
+                </div>
+                <div flex="5">
+                    <!-- Gap -->
+                </div>
 
             </div>
             <div flex="10" layout="row" style="background-color:#000000;">
@@ -428,16 +577,16 @@
                 </div>
                 <div flex="20" layout="row" layout-align="center center">
                     <div layout="column" flex layout-margin layout-padding layout-align="center center">
-
+                        <a href=""><img class="imageResize" src="./assets/icons/facebook.png"></a>
                     </div>
                     <div layout="column" flex layout-margin layout-padding layout-align="center center">
-
+                        <a href=""><img class="imageResize" src="./assets/icons/google.png"></a>
                     </div>
                     <div layout="column" flex layout-margin layout-padding layout-align="center center">
-
+                        <a href=""><img class="imageResize" src="./assets/icons/twitter.png"></a>
                     </div>
                 </div>
-                <div flex="10">
+                <div flex="5">
                 </div>
             </div>
         </div>

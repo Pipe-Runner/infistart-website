@@ -58,12 +58,13 @@ i {
 
 /*Navigation Button border*/
 .inactiveButton {
-	border:0.5px solid #ffffff;
 	cursor: pointer;
 	color: #ffffff;
+	white-space: nowrap;
 }
 
 .activeButton {
+	white-space: nowrap;
 	animation-name: bubble;
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
@@ -73,6 +74,8 @@ i {
 	color: #000000;
 	cursor: pointer;
 	transition: color 0.5s ease;
+	border-radius: 15px 15px 15px 15px;
+	background-clip: padding-box;
 }
 
 @keyframes bubble {
@@ -148,4 +151,38 @@ i {
 .imageResize {
 	max-height:100%;
 	height:auto;
+}
+
+/* Customized input box */
+md-input-container .md-input{
+    border-color: #ffffff;
+	color:#ffffff;
+}
+
+md-input-container .md-input label{
+	color:#ffffff;
+}
+
+md-input-container label{
+	color:#ffffff;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input{
+	color:#ffffff;
+    border-color: #FFFF00;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: #FFFF00;
+}
+
+md-input-container:not(.md-input-invalid).md-input-has-value label {
+    color: #9E9E9E;
+}
+
+/* Text slide */
+.textSlideInvisible {
+	z-index: -1;
+	display: none;
+	transition-delay: 3s;
 }

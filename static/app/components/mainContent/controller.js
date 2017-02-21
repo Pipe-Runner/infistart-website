@@ -1,7 +1,8 @@
 angular.module('mainContent')
-.controller('mainContentController',function($scope,$timeout){
+.controller('mainContentController',function($scope,$timeout,$interval){
 
-    $scope.change=0;
+    $scope.textSlide = 0;
+    $scope.change = 0;
     $scope.showDetails = false;
     $scope.selected = {};
 
@@ -34,4 +35,9 @@ angular.module('mainContent')
         $scope.showDetails = true;
         $scope.selected = productList[product_index];
     };
+
+    // Interval for text slide
+    $interval(function () {
+        $scope.textSlide = ($scope.textSlide + 1)%3;
+    }, 7000);
 });
