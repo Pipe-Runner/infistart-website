@@ -1,7 +1,7 @@
-<div ng-controller="mainContentController" layout-fill style="position:relative;">
+<div ng-controller="mainContentController" layout-fill style="position:relative;" ng-cloak>
 
     <!-- Nav bar -->
-    <div layout="row" style="position:fixed;top:0px;height:8%;width:100%;z-index: 2;" ng-class="snapIndex!=0?['md-whiteframe-8dp','blackNavBar']:['transparentNavBar']">
+    <div layout="row" style="position:fixed;top:0px;height:8%;width:100%;z-index:2;" ng-class="snapIndex!=0?['md-whiteframe-8dp','blackNavBar']:['transparentNavBar']">
         <div flex="10" layout="row" layout-align="center center" layout-margin layout-padding>
             <!-- Logo -->
             <img src="./assets/image/infistartlogo.png">
@@ -9,7 +9,7 @@
         <div flex>
             <!-- Gap -->
         </div>
-        <div layout="row" flex="45" layou-margin layout-padding style="font-family: 'Acme', sans-serif;font-size:17px;">
+        <div layout="row" flex="50" layou-margin layout-padding style="font-family: 'Ubuntu',sans-serif;">
             <!-- Section buttons -->
             <div layout="column" flex ng-class="snapIndex==0?'activeButton':'inactiveButton'" style="font-size:21px;margin:auto;margin-right:1.5%;" ng-click="snapIndex=0" layout-align="center center">
                 Home
@@ -117,7 +117,7 @@
                 <div layout="row" flex layout-align="center center">
                     <div flex="20">
                     </div>
-                    <div layout="row" flex style="font-size:60px;font-weight:500;font-family: 'Ubuntu', sans-serif;color:#ffffff;" layout-align="center center">
+                    <div layout="row" flex style="font-size:400%;font-weight:500;font-family: 'Ubuntu', sans-serif;color:#ffffff;" layout-align="center center">
                         Switch To
                         <div style="position:relative;">
                             <div style="color:#FFEB3B" ng-class="change==2?['animated','bounceIn']:'smartInvisible'">&nbsp;Smart&nbsp;</div>
@@ -205,7 +205,7 @@
                 <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
             </div>
             <div flex layout="column">
-                <div flex="10" layout="column" layout-align="end center" style="font-family: 'Ubuntu', sans-serif;font-size:35px;color:#ffffff;">
+                <div flex="10" layout="column" layout-align="end center" style="font-family: 'Ubuntu', sans-serif;font-size:2.3em;color:#ffffff;">
                     How we make it work ?
                 </div>
                 <div flex layout="row" layout-align="center center">
@@ -217,12 +217,12 @@
                         <div layout="column" layout-align="center center">
                             <img src="./assets/icons/think.png">
                             <br />
-                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:24px;color:#ffffff;">
+                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:1.4em;color:#ffffff;">
                                 Interface & Design
                             </span>
                             <br />
                         </div>
-                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:1.2em;color:#ffffff;">
                             We put the finest brains to plan the best structure and outstanding features for our product to give you the best user experience.
                         </div>
                     </div>
@@ -231,12 +231,12 @@
                         <div layout="column" layout-align="center center">
                             <img src="./assets/icons/design.png">
                             <br />
-                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:24px;color:#ffffff;">
+                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:1.4em;color:#ffffff;">
                                 Design & Data-Flow
                             </span>
                             <br />
                         </div>
-                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:1.2em;color:#ffffff;">
                             Develop a prototype of the product to give you an idea of its design and working which is inspired by Material Design model
                         </div>
                     </div>
@@ -245,12 +245,12 @@
                         <div layout="column" layout-align="center center">
                             <img src="./assets/icons/code.png">
                             <br />
-                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:24px;color:#ffffff;">
+                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:1.4em;color:#ffffff;">
                                 Code & APIs
                             </span>
                             <br />
                         </div>
-                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:1.2em;color:#ffffff;">
                             The eye candy design of our product is backed by flawless Google APIs that include messaging, maps, wallet integration as well as facebook and Google+.
                         </div>
                     </div>
@@ -259,12 +259,12 @@
                         <div layout="column" layout-align="center center">
                             <img src="./assets/icons/relax.png">
                             <br />
-                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:24px;color:#ffffff;">
+                            <span style="font-family: 'Ubuntu', sans-serif;font-weight:700;font-size:1.4em;color:#ffffff;">
                                 Launch & Forget
                             </span>
                             <br />
                         </div>
-                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:18px;color:#ffffff;">
+                        <div flex layout="column" layout-margin layout-padding layout-align="start center" style="text-align:center;font-family: 'Ubuntu', sans-serif;font-size:1.2em;color:#ffffff;">
                             As soon as the beta version goes live; we sniff for bugs and keep track of users using the state of the art Google Analytics technology, keeping you one step ahead.
                         </div>
                     </div>
@@ -285,7 +285,7 @@
             </div>
             <div flex layout="column">
                 <!-- Content here -->
-                <div flex="15" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:35px;color:#ffffff;">
+                <div flex="15" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:2.3em;color:#ffffff;">
                     Why Us ?
                     <br />
                 </div>
@@ -400,12 +400,69 @@
         </div>
 
         <!-- Our team content -->
-        <div layout="column" style="height:100%;background-color:#F44336">
+        <div layout="column" style="height:100%;background:url('./assets/image/workSpace.jpg')">
             <div flex="15" layout="row" layout-align="center end">
                 <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goUp()">keyboard_arrow_up</i>
             </div>
-            <div flex>
-                <!-- Content here -->
+            <div flex="10" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:2.3em;color:#ffffff;">
+                The Elite Squad
+            </div>
+            <div flex layout="row">
+                <div flex="5">
+                    <!-- Gap -->
+                </div>
+                <div flex layout="column">
+                    <!-- Team content -->
+                    <div flex layout="column">
+                        <div flex layout="row">
+                            <div flex="20" layout="column" class="displayPicture" layout-align="center center">
+                                <!-- Detailed pic -->
+                                <img ng-class="textBlink==0?['displayPictureResize']:['displayPictureResize','textBlink']" src="{{closeUp}}">
+                            </div>
+                            <div flex layout="column" layout-padding>
+                                <div flex="15" ng-class="textBlink==0?['detailTitle']:['detailTitle','textBlink']" >
+                                    <b>{{title}}</b>
+                                </div>
+                                <div flex="10" layout="row" layout-align="start center">
+                                    <div flex ng-class="textBlink==0?['detailRole']:['detailRole','textBlink']">
+                                        <b>{{role}}</b>
+                                    </div>
+                                </div>
+                                <div flex="10" layout="row" layout-align="start center">
+                                    <div flex ng-class="textBlink==0?['detailRole']:['detailRole','textBlink']">
+                                        <b>{{college}}</b>
+                                    </div>
+                                </div>
+                                <div flex="10" layout="row" layout-align="start center">
+                                    <div flex ng-class="textBlink==0?['detailRole']:['detailRole','textBlink']">
+                                        <b>{{memberEmail}}</b>
+                                    </div>
+                                </div>
+                                <div flex ng-class="textBlink==0?['detailcontent']:['detailcontent','textBlink']">
+                                    {{details}}
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- sperator -->
+                        <div flex="10" layout="column" layout-padding layout-align="center">
+                            <div flex class="line-separator"></div>
+                            <div flex>
+
+                            </div>
+                        </div>
+                        <!-- Team images -->
+                        <div flex="20" ng-mousemove="mouseOnSlide()">
+                            <div style="float:left;" ng-repeat="item in member" ng-class="memberNumber==$index?['displayPictureActive','square']:['displayPictureInactive','square']" ng-click="showPersonDetails($index)">
+                                <img class="displayPictureResize content" src="{{item.sidePic}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div flex="5">
+                    <!-- Gap -->
+                </div>
+
             </div>
             <div flex="10" layout="row" layout-align="center center">
                 <i class="material-icons" style="font-size:45px;color:#ffffff" ng-click="goDown()">keyboard_arrow_down</i>
@@ -420,7 +477,7 @@
 
             <!-- Testimonail content -->
             <div flex="30" layout="column">
-                <div flex="20" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:30px;color:#ffffff;">
+                <div flex="20" layout="column" layout-align="center center" style="font-family: 'Ubuntu', sans-serif;font-size:2.2em;color:#ffffff;">
                     Happy Customers
                 </div>
                 <div flex layout="row">

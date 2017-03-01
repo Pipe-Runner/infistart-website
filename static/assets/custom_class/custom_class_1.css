@@ -3,22 +3,29 @@
 	display: none;
 }
 
+/* base font size */
+body {
+	font-size: 100%;
+}
+
 /*Scroll dots*/
 .inactiveDot {
-	height: 2px;
-	width: 2px;
+	height: 1%;
+	width: 1%;
 	border-radius: 50%;
-	/*background: #ffffff;*/
-	border-size:0.5px;
+	border-size:0.5%;
 	border-style:solid;
 	border-color:#ffffff;
 }
 
 .activeDot {
-	height: 25px;
-	width: 25px;
+	height: 1%;
+	width: 1%;
 	border-radius: 50%;
 	background: #ffffff;
+	border-size:0.5%;
+	border-style:solid;
+	border-color:#ffffff;
 }
 
 /*Removing dotted border and cursor change on links and divs*/
@@ -150,7 +157,7 @@ i {
 /* Image Resize class */
 .imageResize {
 	max-height:100%;
-	height:auto;
+	max-width:100%;
 }
 
 /* Customized input box */
@@ -185,4 +192,117 @@ md-input-container:not(.md-input-invalid).md-input-has-value label {
 	z-index: -1;
 	display: none;
 	transition-delay: 3s;
+}
+
+/* Team pic */
+.line-separator{
+
+height:1px;
+border-bottom:1px solid #ffffff;
+}
+
+.displayPicture {
+	border: 2px dashed #ffffff;
+	margin-left: 3%;
+	margin-right: 2%;
+	padding: 0.5%;
+}
+
+div.displayPictureActive {
+	overflow: hidden;
+	border: 2px solid #ffffff;
+	/*padding: 1%;*/
+	/*margin: 1%;*/
+	transform: scale(1);
+	transition: all 0.6s ease;
+}
+
+div.displayPictureInactive {
+	filter: grayscale(100%);
+	overflow: hidden;
+	border: 2px solid #ffffff;
+	/*padding: 1%;*/
+	/*margin: 1%;*/
+	cursor: pointer;
+	transform: scale(0.8);
+	transition: all 0.6s ease;
+}
+
+div.displayPictureInactive:hover {
+	overflow: hidden;
+	border: 2px solid #ffffff;
+	cursor: pointer;
+	filter: grayscale(0%);
+	transition: all 0.6s ease;
+}
+
+.square {
+	width: 8%;
+	margin-left: 5.3%;
+	border-radius: 50%;
+	background-clip: padding-box;
+}
+
+.square:after {
+  	content: "";
+  	display: block;
+  	padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.displayPictureResize {
+	width: 100%;
+	height: 100%;
+}
+
+.detailTitle {
+	font-family: 'Ubuntu', sans-serif;
+	font-size:30px;
+	color:#ffffff;
+	text-align:left;
+}
+
+.detailRole {
+	font-family: 'Ubuntu', sans-serif;
+	font-size:18px;
+	color:#ffffff;
+	text-align:left;
+	/*padding-bottom: 0.5%;*/
+}
+
+.detailcontent {
+	font-family: 'Ubuntu', sans-serif;
+	font-size:16px;
+	color:#ffffff;
+	text-align:left;
+}
+
+.textBlink {
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-fill-mode: none;
+	animation-direction: normal;
+	animation-timing-function: linear;
+}
+
+@keyframes blink {
+	0%{
+		visibility: visible;
+		opacity: 1;
+	}
+	50% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
 }
