@@ -1,4 +1,4 @@
-<div ng-controller="mainContentController" layout-fill style="position:relative;" ng-cloak>
+<div ng-controller="mainContentController" layout-fill style="position:relative;">
 
     <!-- Nav bar -->
     <div layout="row" style="position:fixed;top:0px;height:8%;width:100%;z-index:2;" ng-class="snapIndex!=0?['md-whiteframe-8dp','blackNavBar']:['transparentNavBar']">
@@ -112,19 +112,35 @@
         <!-- Header content -->
         <div layout="column" style="height:100%;">
             <div layout="column" flex="100" style="background:url('./assets/image/cover2.jpg')">
-                <div flex="10">
+                <div flex>
                 </div>
-                <div layout="row" flex layout-align="center center">
-                    <div flex="20">
+                <div flex style="color:#ffffff;font-size:250%;font-weight:300;font-family: 'Ubuntu', sans-serif;" layout="column" layout-align="end center">
+                    A Modern Approach To
+                </div>
+                <div layout="row" flex="10" layout-align="center end">
+                    <div layout="row" style="position:relative;font-size:350%;font-weight:400;font-family: 'Ubuntu', sans-serif;">
+                        <span>&nbsp;</span>
+                        <div ng-class="wordStay?['wordStay']:['inlineWords','wordAnimation']">
+                            <div style="opacity:0;">Classroom</div>
+                            <span>Coachings</span>
+                            <span>Schools</span>
+                            <span>Classrooms</span>
+                        </div>
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+                <div layout="row" flex="35" layout-align="center start">
+                    <div flex="15">
                     </div>
                     <div layout="row" flex style="font-size:400%;font-weight:500;font-family: 'Ubuntu', sans-serif;color:#ffffff;" layout-align="center center">
                         Switch To
                         <div style="position:relative;">
                             <div style="color:#FFEB3B" ng-class="change==2?['animated','bounceIn']:'smartInvisible'">&nbsp;Smart&nbsp;</div>
                             <div style="color:#26C6DA;position:absolute;top: 0;left: 0;" ng-class="change>=1?['animated','hinge','dullInvisible']:'dullVisible'">&nbsp;&nbsp;&nbsp;dull&nbsp;&nbsp;&nbsp;</div>
-                        </div> With Us
+                        </div>
+                        With Us
                     </div>
-                    <div flex="20">
+                    <div flex="15">
                     </div>
                 </div>
                 <div layout="row" flex="10" layout-align="center center">

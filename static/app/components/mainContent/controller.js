@@ -8,7 +8,7 @@ angular.module('mainContent')
     $scope.memberNumber = 0;
     $scope.textBlink = 0;
     $scope.snapIndex = 0;
-
+    $scope.wordStay = 1;
 
     // Product details array
     var productList = [
@@ -136,6 +136,11 @@ angular.module('mainContent')
     		$scope.textBlink=0;
     	},1000);
     };
+
+    // WordStay Delay
+    $timeout(function() {
+        $scope.wordStay=0;
+    },4200);
 
     promise = $interval(function () {
         $scope.memberNumber = ($scope.memberNumber + 1)%7;
