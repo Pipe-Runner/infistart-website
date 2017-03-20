@@ -45,7 +45,7 @@ body {
 	top:0px;
 	left:0px;
 	width: 100%;
-	color: #CCFF90;
+	color: #FFD180;
 }
 
 .wordAnimation span{
@@ -110,10 +110,6 @@ i {
 }
 
 /* Header Word Animations */
-.dullVisible {
-	z-index: 1;
-}
-
 .dullInvisible {
 	z-index: -1;
 	transition-delay: 2.5s;

@@ -140,7 +140,7 @@ angular.module('mainContent')
     // WordStay Delay
     $timeout(function() {
         $scope.wordStay=0;
-    },4200);
+    },4000);
 
     promise = $interval(function () {
         $scope.memberNumber = ($scope.memberNumber + 1)%7;
